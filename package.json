@@ -1,0 +1,31 @@
+{
+  "name": "crowdin-client",
+  "description": "Crowdin HTTP client for node.js",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4u/crowdin-client"
+  },
+  "homepage": "https://github.com/4u/crowdin-client",
+  "license": "WTFPL",
+  "main": "lib/client.js",
+  "scripts": {
+    "build": "rimraf lib && babel src -d lib",
+    "lint": "eslint -c .eslintrc src",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
