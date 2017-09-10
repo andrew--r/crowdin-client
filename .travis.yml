@@ -8,16 +8,12 @@ branches:
 cache:
   directories:
   - node_modules
-notifications:
-  email:
-    on_success: never
-    on_failure: always
 before_install:
   - npm update
 install:
   - npm install
 script:
-  - npm run prepublish
+  - npm run build
 deploy:
   - provider: npm
     email: max@rururu.me
