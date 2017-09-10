@@ -10,9 +10,8 @@
   "license": "WTFPL",
   "main": "lib/client.js",
   "scripts": {
-    "build": "rimraf lib && babel src -d lib",
-    "lint": "eslint -c .eslintrc src",
-    "prepublish": "npm run lint && npm run build"
+    "build": "npm run lint && rimraf lib && babel src -d lib",
+    "lint": "eslint -c .eslintrc src"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
