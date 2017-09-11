@@ -17,6 +17,7 @@ script:
 deploy:
 - provider: npm
   email: max@rururu.me
+  skip_cleanup: true
   api_key:
     secure: kEgkKJE/ZE+dPqin7ao1w0074BEjxPITe7VSL0bTb+HKLJvKv30r3Zxz1/zeOEhar6CMCui3H2DzqZv6+aSGu5tEGv/ii/wR9sTlwYehtQWnrzwTB/aJzndfneGKzxIR9H1ZvhgstWmUmhBgjt6OY0X5w1hboh6KatGOk5C86ID3btfuNJOxtSO8o9QXfcoJR062iD+Ov26LOHq3lL3ROuakkmuhBvURAq2FGV4DpBEEv+ny51EF0fFLA0U/n8rp/+YAqQKB3413yLqasZUI8SkU/dN2N1eJirmrzd8LFGzRHueGA/9SCaDRFv4FHnFbdGoQY3kiTfgpU7QLqU1myDLB1umrzHJQiBQF+0bcF0slKP31hr5/P3tmzNDSBk8Hc/kcQLkNl4/6KFyMKN1tMvdHCLeCt9UILB8O+MiVhY9hqCDFIowhd8pWjbp2nIIAH1aTPL4sldpggETnpg+JA5C2kGTBlpO/XhazVNaYLEwzPoOhHN16Rqx1WjcMOsOECDtjME/bO9cuK6JQ+7rnq3t8R7fWu7+i3OOQMj0tQ3/frE60W3P4B8+enZrspfu/4d6bzAlhnh3zIa72VJdFYhvCV+I+O4h9RmOTRTekTgPTf4bZ0ROJSjyXVNCdav7r/0w7gwoYqz4dNbnGuxJVfdtuHUaaIH9xm59tFglj0JA=
   on:
