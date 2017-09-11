@@ -15,11 +15,10 @@ install:
 script:
 - npm run build
 deploy:
-  matrix:
-  - provider: npm
-    email: max@rururu.me
-    skip_cleanup: true
-    on:
-      branch: master
+- provider: npm
+  email: max@rururu.me
+  skip_cleanup: true
+  on:
+    branch: master
   api_key:
     secure: UJdvV+azCetG0j1qA/+atarT3Z39EYFlFub07l6/KfsRPElQoSkWGThQq6sWxGqhLkMj8raz75R9vtEEzqZnpznLgtFoV5HH+sLOUzJFrsCmvIL34ZRTpuydJPG4WBchH5XXHG5RJfkp95npAtl8GW7v7nUixvGABTNFNHhB2ePqeOEq6ftq7RZpXAcywuQx/3yVoSZCEvo8ekDPQqjyX7iiHGTGmptOl0W0xxvMc1YCwmEabCj9EDzdLZW1G5fTxLU99cMnXa5UMUHC1VLqWbZW/c17CSfUc4ZL2zIvJuqe0CP+WEmxkk/4Z+dHkmu6oxgeXlAdYTXgkChXkBL2OcbGlsAOz7bqD4PAD+G8YxpyksBiSUQGb2XoFEMcEnl/LhRcJqpUd/zzL/omrwi4AmjqKNTmYfhKS3q0S78XhHgrov0LbsessjMZYSMW3wHWQmfDXq8rJDZZ8HXXi833j2WuKabGqmHFHwyvoinE1G71PjpQ5IdG7qPaPRaKLDV6UpTPgdJFv9mZrcAnw1w1KKSN+NwNAdAtYCj70IhTwM7KER7Lx4yEHeFz508H3N1Non+LmV0vHElHtcm1uYzB7nN8ng4BlU5eO2b5/z5x56/8QliEG4TKwtng6RpbVLpzVqNjCNOVwoofuIJdTrJ4F0U63kYRuOrTP8/RKVjHmDE=
