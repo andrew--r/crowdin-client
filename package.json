@@ -1,7 +1,7 @@
 {
   "name": "crowdin-client",
   "description": "Crowdin HTTP client for node.js",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/4u/crowdin-client"
@@ -11,9 +11,11 @@
   "main": "lib/client.js",
   "scripts": {
     "build": "npm run lint && rimraf lib && babel src -d lib",
-    "lint": "eslint -c .eslintrc src"
+    "lint": "eslint -c .eslintrc src",
+    "prepublishOnly": "auto-upgrade-npm-version"
   },
   "devDependencies": {
+    "auto-upgrade-npm-version": "^1.0.7",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
