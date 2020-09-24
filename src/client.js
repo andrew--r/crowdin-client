@@ -14,21 +14,28 @@ export default class Crowdin {
   constructor(options) {
     this.options = options;
     if (!options.project) {
-      throw new Error('Key `project` should be specified and contained crowdin project ID.');
+      throw new Error('Key `project` should be specified and contain crowdin project ID.');
     }
-    if (!options.key) {
+    if (!options.accountKey) {
       throw new Error(
-        'Key `key` should be specified and contained crowdin API key.\n' +
+        'Key `accountKey` should be specified and contain crowdin account API key.\n' +
+        `Check https://crowdin.com/project/${options.project}/settings#api`,
+      );
+    }
+    if (!options.login) {
+      throw new Error(
+        'Key `login` should be specified and contain crowdin account username.\n' +
         `Check https://crowdin.com/project/${options.project}/settings#api`,
       );
     }
   }
 
   getEndpointUrl(path, params) {
-    const { project, key } = this.options;
+    const { project, accountKey, login } = this.options;
     const endpointUrl = new URL(`https://api.crowdin.com/api/project/${project}/${path}`);
     endpointUrl.searchParams.set('json', 1);
-    endpointUrl.searchParams.set('key', key);
+    endpointUrl.searchParams.set('account-key', accountKey);
+    endpointUrl.searchParams.set('login', login);
     if (params) {
       Object.keys(params).map(name => endpointUrl.searchParams.set(name, params[name]));
     }

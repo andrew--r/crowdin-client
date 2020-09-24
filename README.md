@@ -10,7 +10,8 @@ Subset of Crowdin HTTP API.
 import Crowdin from 'crowdin-client';
 
 const crowdin = new Crowdin({
-  key: 'YOUR_KEY',
+  accountKey: 'YOUR_KEY',
+  login: 'YOUR_USERNAME',
   project: 'YOUR_PROJECT',
 });
 
@@ -27,7 +28,8 @@ const promise = crowdin.createOrUpdateVersionedFile(
 import Crowdin from 'crowdin-client';
 
 const crowdin = new Crowdin({
-  key: 'YOUR_KEY',
+  accountKey: 'YOUR_KEY',
+  login: 'YOUR_USERNAME',
   project: 'YOUR_PROJECT',
 });
 
